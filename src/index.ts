@@ -16,8 +16,13 @@ if (options['-c']) {
   console.log('command')
 } else if (options['<file>']) {
   console.log('file')
-} else {
-  if (process.stdin.isTTY && process.stdin.setRawMode) {
-    process.stdin.setRawMode(true)
-  }
+} 
+
+if (process.stdin.isTTY && process.stdin.setRawMode) {
+  process.stdin.setRawMode(true)
 }
+
+process.stdin.on('data', (data: Buffer) => {
+  if (data[0] === 3) process.exit(0)
+  console.log(data)
+})
