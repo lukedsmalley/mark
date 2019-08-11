@@ -1,0 +1,17 @@
+{
+  "name": "mark",
+  "version": "1.0.0",
+  "description": "Fsck Bash",
+  "main": "lib/index.js",
+  "author": "Luke Smalley",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/docopt": "^0.6.31",
+    "@types/node": "^12.7.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "docopt": "^0.6.2"
+  }
+}
